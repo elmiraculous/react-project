@@ -1,0 +1,21 @@
+@import "../../styles/Color"
+@import "../../styles/Fonts"
+.block
+  display: flex
+  flex-direction: row
+.white
+  background: $colorBottomLight
+  color: rgba($colorTextGrey, 0.8)
+  @include font(400)
+  margin-right: 10px
+  border-radius: 61px
+  height: 40px
+  border: none
+  padding: 1rem
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+.white:hover, .white:focus
+  background: $colorBottomDark
+  color: $colorWhite

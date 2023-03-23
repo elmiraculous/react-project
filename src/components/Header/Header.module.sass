@@ -1,0 +1,24 @@
+@import "../../styles/Color"
+@import "../../styles/Fonts"
+.header
+  display: flex
+  flex-direction: row
+  background: $colorWhite
+  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.12)
+  position: sticky
+  padding: 1rem 4rem
+  left: 0
+  top: 0
+  right: 0
+  z-index: 100
+.text
+  @include font(400)
+  color: rgba($colorTextGrey, 0.64)
+  margin-right: 5px
+  margin-left: 5px
+  text-decoration: none
+.logo
+  margin-right: 10px
+.text2
+  @include font(400)
+  color: rgba($colorTextGrey, 0.8)

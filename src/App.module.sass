@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap')
-.mainText
-  font-family: 'Inter', sans-serif
-  font-weight: 600
-  color: #000000
-  font-size: 40px
-  //margin: 50% 0 0 10%
-.main
-  margin-top: 6%
-.block
+@import "src/styles/Color"
+@import "src/styles/Fonts"
+
+.layout
   display: flex
-  flex-direction: row
-  justify-content: space-around
+  flex-direction: column
+  min-height: 100vh
+.layout main
+  flex: 1 0 auto
