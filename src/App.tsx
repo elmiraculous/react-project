@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./components/Header/Header";
-import {Footer} from "./components/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
-import {Main} from "./EcoMarket/Main/Main";
+import {Main} from "./Main/Main";
 import {CollectionPoints} from "./CollectionPoints/CollectionPoints";
 import {EcoMarket} from "./EcoMarket/EcoMarket";
 import {About} from "./About/About";

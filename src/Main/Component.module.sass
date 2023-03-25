@@ -1,0 +1,32 @@
+@import "../styles/Color"
+@import "../styles/Fonts"
+
+.component
+  margin: 24px
+  border: 1px solid rgba(18, 34, 88, 0.12)
+  border-radius: 16px
+  display: flex
+  flex-direction: row
+  padding: 40px 0 5px 40px
+  &__row
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    &__text1
+      @include font(600)
+      margin-bottom: 14px
+      font-size: 2.2rem
+      color: $colorTextGrey
+    &__text2
+      @include font(400)
+      color: rgba($colorTextGrey,0.56)
+      margin-bottom: 40px
+      font-size: 0.8rem
+    &__button
+  &__img
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+.images
+
+  width: 250px

@@ -3,7 +3,7 @@ import styles from "./EcoMarket.module.sass";
 import {Filter} from "./filter/Filter";
 import {MainFilter} from "./MainFilter/MainFilter";
 import {ProductList} from "./Products/ProductList";
-export  const EcoMarket=()=>{
+export const EcoMarket=()=>{
     return(
         <div className={styles.main}>
             <div className={styles.block}>

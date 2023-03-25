@@ -1,0 +1,42 @@
+@import "../styles/Color"
+@import "../styles/Fonts"
+.slider
+  //margin: 40px 7% 0
+  align-items: center
+  display: flex
+  flex-direction: row
+  justify-content: center
+  &__img
+    margin: 0 20px
+  &__content
+    align-items: center
+    display: flex
+    flex-direction: row
+    color: $colorMain
+    border-radius: 18px
+    padding-left: 50px
+    &__bl
+      display: flex
+      flex-direction: column
+      &__text1
+        @include font(700)
+        font-size: 2.7rem
+        margin-bottom: 15px
+      &__text2
+        @include font(400)
+        font-size: 1rem
+        margin-bottom: 35px
+
+      &__button
+        background: $colorGreen
+        color: $colorWhite
+        border-radius: 8px
+        align-items: center
+        padding: 12px 20px
+        @include font(500)
+.arrowLeft
+  margin-right: -40px
+  z-index: 10
+.arrowRight
+  margin-left: -40px
+  z-index: 10
