@@ -17,14 +17,20 @@ export const Slider: React.FC<SliderProps> = ({ slides }) => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
     const handlePrevSlide = () => {
-        if (currentSlide > 0) {
-            setCurrentSlide(currentSlide - 1)
+        if (currentSlide === 0) {
+            setCurrentSlide(slides.length-1)
+        }
+        else {
+            setCurrentSlide(currentSlide-1)
         }
     }
 
     const handleNextSlide = () => {
         if (currentSlide < slides.length - 1) {
             setCurrentSlide(currentSlide + 1)
+        }
+        else {
+            setCurrentSlide(0)
         }
     }
 
