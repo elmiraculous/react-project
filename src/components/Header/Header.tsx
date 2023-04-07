@@ -12,7 +12,7 @@ export  const Header=()=>{
             </div>
             <nav>
                 <NavLink to="/Main" className={styles.text}>Главная</NavLink>
-                <NavLink to='/CollectionPoints' className={styles.text}>Пункты сборая</NavLink>
+                <NavLink to='/CollectionPoints' className={styles.text}>Пункты сбора</NavLink>
                 <NavLink to="/EcoMarket" className={styles.text}>ЭкоМаркет</NavLink>
                 <NavLink to="/About" className={styles.text}>О сервисе</NavLink>
             </nav>

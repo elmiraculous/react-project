@@ -30,27 +30,14 @@ const slides = [
         color: '#BFF0DE'
     }
 ]
-const component1=[
-    {
-        text1:'Пункты сбора',
-        text2: 'Посмотри, где в твоем городе можно сдать вторсырье на переработку',
-        img: map2
-    }]
-const component2=[
-    {
-    text1:'ЭкоМаркет',
-    text2: 'Используй заработанные экокоины для покупки товаровиз переработанных материалов ',
-    img: map
-    }
-]
 export const Main=()=>{
     return(
         <div className={styles.main}>
             <Slider slides={slides}/>
             <div className={styles.block}>
 
-                <Component text1={'Пункты сбора'} text2={'Используй заработанные экокоины для покупки товаровиз переработанных материалов '} img={map}/>
-                <Component text1={'ЭкоМаркет'} text2={'Используй заработанные экокоины для покупки товаровиз переработанных материалов '} img={map2}/>
+                <Component text1={'Пункты сбора'} text2={'Посмотри, где в твоем городе можно сдать вторсырье на переработку'} img={map} link={'/CollectionPoints'}/>
+                <Component text1={'ЭкоМаркет'} text2={'Используй заработанные экокоины для покупки товаров из переработанных материалов '} img={map2} link={'/EcoMarket'}/>
             </div>
         </div>
     )

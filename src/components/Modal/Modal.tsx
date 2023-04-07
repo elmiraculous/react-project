@@ -1,30 +1,48 @@
-import React, {useEffect, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import styles from './Modal.module.sass'
-import {createPortal} from "react-dom";
+import {Portal} from "../Portal/Portal"
+import {UseModalHooks} from "../hooks/UseModalHooks"
+import {PartnerLogin} from "./PartnerLogin"
+import {Register} from "./Register"
+import {Code} from "./Code"
+import {Login} from "./Login";
 
 interface Props{
     visible: boolean;
     onClose: ()=> void;
+
 }
+
+enum ModalTabs{
+    Login,
+    Register,
+    PartnerLogin,
+    EnterCode,
+}
+
 export const Modal=({visible,onClose}:Props)=>{
-    const [container]=useState(document.createElement('div'))
-    container.classList.add('portal-root')
+    const [tab, setTab] = useState<string>("login");
 
-    useEffect(()=>{
-        document.body.appendChild(container)
-
-        return()=> {
-                document.body.removeChild(container)
-            }
-    }, [])
-    if(!visible) return <></>
-
-    return createPortal(
+    const handleTabChange = (tabName: string) => {
+        setTab(tabName);
+    };
+    const ref=useRef<HTMLDivElement>(null)
+    UseModalHooks(ref,()=>onClose())
+    return  (
         <>
-            <div className={styles.overlay} onClick={()=>onClose()}>
-                <div className={styles.modal}>rrhteszdfhgdgd</div>
-            </div>
-        </>,
-        container
+            {visible &&
+                <Portal>
+                    <div className={styles.overlay} ref={ref}>
+                        <div className={styles.modal}>
+                            {tab === "login" && <Login onTabChange={handleTabChange} />}
+                            {tab === "register" && <Register onTabChange={handleTabChange} />}
+                            {tab === "code" && <Code onTabChange={handleTabChange} />}
+                            {tab === "partner-login" && (
+                                <PartnerLogin onTabChange={handleTabChange} />
+                            )}</div>
+                    </div>
+                </Portal>
+            }
+        </>
     )
 }
