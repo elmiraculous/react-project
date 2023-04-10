@@ -25,7 +25,6 @@ export const Code: React.FC<CodeProps> = ({ onTabChange }) => {
                     handleSubmit,
                 }) => (
                   <Form className={styles.form}>
-                      <div className={styles.text}>Ввести код</div>
                       <div className={styles.text2}>Введите код отправленный вам на телефон</div>
 
                       <Field

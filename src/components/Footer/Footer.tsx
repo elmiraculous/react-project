@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./Footer.module.sass";
-import mail from '../../images/Mail (1).png'
-import call from '../../images/Call.png'
-export const Footer=()=>{
-    return(
+import {Icon} from "../Icon/Icon";
+
+export const Footer = () => {
+    return (
         <footer className={styles.footer}>
             <div className={styles.gmail}>
-                <img src={mail} alt="mail"/>
+                <div className={styles.emailImg}><Icon name={'email'}/></div>
                 <span className={styles.text}>info@ecorus.ru</span>
             </div>
             <div className={styles.phone}>
-                <img src={call} alt="call"/>
+                <div className={styles.phoneImg}><Icon name={'phone'}/></div>
                 <span className={styles.text}>+7 (800) 880-88-88</span>
             </div>
         </footer>

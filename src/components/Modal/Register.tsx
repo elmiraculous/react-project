@@ -32,7 +32,6 @@ export const Register: React.FC<RegisterProps> = ({ onTabChange }) => {
                       handleSubmit,
                   }) => (
                     <Form className={styles.form}>
-                        <div className={styles.text}>Вход или регистрация</div>
                         <Field
                             className={styles.input}
                             type="text"

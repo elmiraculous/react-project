@@ -29,7 +29,6 @@ export const PartnerLogin: React.FC<PartnerLoginProps> = ({ onTabChange }) => {
 
                     <Form className={styles.form}>
 
-                        <div className={styles.text}>Вход</div>
                         <Field
                             className={styles.input}
                             type="text"

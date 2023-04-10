@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import left from "../images/left.png";
 import right from "../images/right.png";
 import styles from "./Slider.module.sass"
+import {Icon} from "../components/Icon/Icon";
 interface Slide {
     text1: string;
     text2: string;
@@ -39,8 +40,8 @@ export const Slider: React.FC<SliderProps> = ({ slides }) => {
     return (
         <div className={styles.slider} >
             <div className={styles.arrowLeft}>
-                <button  onClick={handlePrevSlide}>
-                    <img src={left} alt="Previous Slide" />
+                <button className={styles.but} onClick={handlePrevSlide}>
+                    <Icon width={8} name={'left'}/>
                 </button>
             </div>
 
@@ -62,8 +63,9 @@ export const Slider: React.FC<SliderProps> = ({ slides }) => {
 
 
             <div className={styles.arrowRight}>
-                <button  onClick={handleNextSlide}>
-                    <img src={right} alt="Next Slide"  />
+                <button className={styles.but} onClick={handleNextSlide}>
+                    <Icon width={8} name={'right'}/>
+
                 </button>
             </div>
         </div>
