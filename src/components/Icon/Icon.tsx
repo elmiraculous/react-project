@@ -7,17 +7,17 @@ type Props = {
     height?: number | string;
 }
 export const Icon = ({name, height, width, size = 24}: Props) => {
-    const iconWidth = width ?? size;
-    const iconHeight = height ?? size;
-    return (
-        <svg
-            className={styles.icon}
-            style={{
-                width: iconWidth + 'px',
-                height: iconHeight + 'px'
-            }}
-        >
-            <use xlinkHref={`/sprite.svg#${name}`}></use>
-        </svg>
-    )
+	const iconWidth = width ?? size
+	const iconHeight = height ?? size
+	return (
+		<svg
+			className={styles.icon}
+			style={{
+				width: iconWidth + "px",
+				height: iconHeight + "px"
+			}}
+		>
+			<use xlinkHref={`/sprite.svg#${name}`}></use>
+		</svg>
+	)
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
 export  const CollectionPoints = () => {
-    return(
-        <div>CollectionPoints
-        </div>
-    )
+	return(
+		<div>CollectionPoints
+		</div>
+	)
 }
