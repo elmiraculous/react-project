@@ -1,16 +1,9 @@
-@import "../../styles/Color"
-@import "../../styles/Fonts"
-.header
-  display: flex
-  flex-direction: row
-  background: $colorWhite
+@import "../styles/Fonts"
+@import "../styles/Color"
+.nav
   box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.12)
-  position: sticky
-  padding: 1rem 4rem
-  left: 0
-  top: 0
-  right: 0
-  z-index: 100
+  padding: 10px
+  margin-bottom: 24px
 
 .text
   @include font(400)
@@ -19,13 +12,6 @@
   margin-left: 5px
   text-decoration: none
   padding: 0 0.25rem
-
-.logo
-  margin-right: 10px
-
-.text2
-  @include font(400)
-  color: rgba($colorTextGrey, 0.8)
 
 .activeLink
   color: $colorTextGrey
@@ -43,7 +29,7 @@ nav .text::before
   bottom: 0
   left: 0
   width: 0
-  margin-bottom: -20px
+  margin-bottom: -10px
   height: 3px
   background-color: $colorGreen
   transition: width 0.3s ease-in-out
