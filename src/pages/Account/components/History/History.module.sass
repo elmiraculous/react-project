@@ -1,0 +1,50 @@
+@import "../../../../styles/Fonts"
+@import "../../../../styles/Color"
+.main
+  display: flex
+  flex-direction: row
+  gap: 100px
+  border: 1px solid rgba(62, 80, 114, 0.16)
+  border-radius: 20px
+  margin-bottom: 16px
+  padding: 32px
+
+  &__box
+
+    &__text
+
+      &__type
+        @include font(500)
+        color: rgba($colorMain, 0.4)
+        margin-bottom: 4px
+
+      &__info
+        @include font(400)
+        display: flex
+        flex-direction: row
+        color: rgba($colorMain, 0.88)
+        margin-bottom: 16px
+
+        &__point
+          &:not(:last-child)::after
+            content: ""
+            display: inline-block
+            margin: 0 15px
+            border-radius: 50%
+            background-color: rgba(62, 80, 114, 0.24)
+            width: 6px
+            height: 6px
+
+  &__price
+    display: flex
+    flex-direction: row
+    justify-content: center
+    text-align: center
+
+    &__text
+      margin-left: 8px
+      @include font(600)
+      display: flex
+      align-items: center
+
+r

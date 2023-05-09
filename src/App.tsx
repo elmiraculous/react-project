@@ -1,13 +1,15 @@
 import React from "react"
 import {Route, Routes} from "react-router-dom"
-import {Main} from "./Main/Main"
-import {CollectionPoints} from "./CollectionPoints/CollectionPoints"
-import {EcoMarket} from "./EcoMarket/EcoMarket"
-import {About} from "./About/About"
+import {Main} from "./pages/Main/Main"
+import {CollectionPoints} from "./pages/CollectionPoints/CollectionPoints"
+import {About} from "./pages/About/About"
 import {Layout} from "./Layout"
-import {Account} from "./Account/Account"
-import {HistoryList} from "./Account/History/HistoryList"
-import {PromocodeList} from "./Account/Promocodes/PromocodesList"
+
+import {Account} from "./pages/Account/Account"
+import {EcoMarket} from "./pages/EcoMarket/EcoMarket"
+import {PromocodeList} from "./pages/Account/components/Promocodes/PromocodesList"
+import {HistoryList} from "./pages/Account/components/History/HistoryList"
+
 
 export const App = () => {
 	return (

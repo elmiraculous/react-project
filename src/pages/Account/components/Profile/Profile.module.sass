@@ -1,0 +1,39 @@
+@import "../../../../styles/Fonts"
+@import "../../../../styles/Color"
+.main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  border: 1px solid rgba(62, 80, 114, 0.16)
+  border-radius: 20px
+  padding: 34px
+  width: 370px
+  margin-right: 40px
+
+  &__img
+
+  &__name
+    @include font(600)
+    color: rgba($colorMain, 0.88)
+    margin-top: 24px
+    margin-bottom: 16px
+    font-size: 20px
+
+  &__phone, &__mail
+    @include font(400)
+    color: rgba($colorMain, 0.72)
+    margin-bottom: 12px
+    font-size: 15px
+
+  &__button
+    margin-top: 12px
+    background: rgba(62, 80, 114, 0.08)
+    @include font(500)
+    color: rgba($colorMain, 0.8)
+    border-radius: 8px
+    padding: 5% 0
+    align-self: stretch
+
+.img
+  width: 120px

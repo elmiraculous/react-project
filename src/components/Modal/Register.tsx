@@ -6,7 +6,7 @@ interface RegisterProps {
     onTabChange: (tabName: string) => void;
 }
 
-export const Register: React.FC<RegisterProps> = ({ onTabChange }) => {
+export const Register: React.FC<RegisterProps> = ({onTabChange}) => {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 	}
@@ -19,9 +19,13 @@ export const Register: React.FC<RegisterProps> = ({ onTabChange }) => {
 		<div>
 			<Formik
 				initialValues={{
-					phone: "",
+					email: "",
+					phone_number: "",
+					password: "",
+					balance: "",
 				}}
 				onSubmit={() => {
+					//rteyrd
 				}}
 
 			>
@@ -41,11 +45,14 @@ export const Register: React.FC<RegisterProps> = ({ onTabChange }) => {
 							//value={values.phone}
 
 						/>
-						<button className={styles.but_entrance}  onClick={() => onTabChange("code")}>Получить код</button>
+						<button className={styles.but_entrance} onClick={() => onTabChange("code")}>Получить код
+						</button>
 						<div className={styles.but_green}>
 							<button onClick={() => onTabChange("login")}>Я уже зарегистировался(-ась)</button>
 						</div>
-						<button className={styles.but_partner} onClick={() => onTabChange("partner-login")}>Вход для партнёров</button>
+						<button className={styles.but_partner} onClick={() => onTabChange("partner-login")}>Вход для
+                            партнёров
+						</button>
 					</Form>
 				)}
 
