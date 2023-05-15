@@ -15,6 +15,7 @@ export type User = {
     role?: User.role;
 };
 
+
 export namespace User {
 
     export enum role {
