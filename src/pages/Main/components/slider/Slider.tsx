@@ -1,6 +1,6 @@
 import React, {useState} from "react"
-import left from "../../images/left.png"
-import right from "../../images/right.png"
+import left from "../../../../images/left.png"
+import right from "../../../../images/right.png"
 import styles from "./Slider.module.sass"
 import {Icon} from "../../../../components/Icon/Icon"
 

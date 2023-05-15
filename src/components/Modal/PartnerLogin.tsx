@@ -6,7 +6,7 @@ interface PartnerLoginProps {
     onTabChange: (tabName: string) => void;
 }
 
-export const PartnerLogin: React.FC<PartnerLoginProps> = ({ onTabChange }) => {
+export const PartnerLogin: React.FC<PartnerLoginProps> = ({onTabChange}) => {
 
 	return (
 		<div>
@@ -17,6 +17,7 @@ export const PartnerLogin: React.FC<PartnerLoginProps> = ({ onTabChange }) => {
 					password: ""
 				}}
 				onSubmit={() => {
+					//ghjyrte
 				}}
 
 			>
@@ -57,23 +58,19 @@ export const PartnerLogin: React.FC<PartnerLoginProps> = ({ onTabChange }) => {
 							//value={values.password}
 						/>
 
-						<button className={styles.but_entrance}  onClick={() => onTabChange("code")}>Получить код</button>
+						<button className={styles.but_entrance} onClick={() => onTabChange("code")}>Получить код
+						</button>
 						<div className={styles.but_green}>
 							<button onClick={() => onTabChange("register")}>Я уже зарегистировался(-ась)</button>
 						</div>
-						<button className={styles.but_partner} onClick={() => onTabChange("partner-login")}>Вход для партнёров</button>
+						<button className={styles.but_partner} onClick={() => onTabChange("partner-login")}>Вход для
+                            партнёров
+						</button>
 					</Form>
 				)}
 
 			</Formik>
 		</div>
-	// <form className={styles.form} onSubmit={handleSubmit}>
-	//     <input className={styles.input} type="text" placeholder="Организация" />
-	//     <input className={styles.input} type="text" placeholder="Телефон" />
-	//     <input className={styles.input} type="password" placeholder="Пароль" />
-	//     <button type="submit">Войти</button>
-	//     <button onClick={handleGetCode}>Получить код</button>
-	// </form>
-
+		
 	)
 }

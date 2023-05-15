@@ -33,6 +33,7 @@ export const Modal = ({visible, onClose}: Props) => {
 		<>
 			{visible &&
                 <Portal>
+
                 	<div className={styles.overlay} ref={ref}>
                 		<div className={styles.modal}>
                 			<div className={styles.block}>
@@ -43,9 +44,8 @@ export const Modal = ({visible, onClose}: Props) => {
                 			{tab === "login" && <Login onTabChange={handleTabChange}/>}
                 			{tab === "register" && <Register onTabChange={handleTabChange}/>}
                 			{tab === "code" && <Code onTabChange={handleTabChange}/>}
-                			{tab === "partner-login" && (
-                				<PartnerLogin onTabChange={handleTabChange}/>
-                			)}</div>
+                			{tab === "partner-login" && (<PartnerLogin onTabChange={handleTabChange}/>)}
+                		</div>
                 	</div>
                 </Portal>
 			}
