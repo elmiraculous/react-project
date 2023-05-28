@@ -1,5 +1,3 @@
-import styles from "../../styles/common.module.sass"
-
 type Props = {
     name: string;
     size?: number | string;
@@ -12,7 +10,6 @@ export const Icon = ({name, height, width, size = 24}: Props) => {
 	return (
 	// eslint-disable-next-line react/react-in-jsx-scope
 		<svg
-			className={styles.icon}
 			style={{
 				width: iconWidth + "px",
 				height: iconHeight + "px"

@@ -1,9 +1,8 @@
-@import "../../../../styles/Color"
-@import "../../../../styles/Fonts"
+@import "../../../../styles/mixins"
 .main
   display: flex
   flex-direction: row
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+  border-bottom: 1px solid rgba(black, 0.12)
   padding-bottom: 24px
   margin-bottom: 24px
 
@@ -11,14 +10,15 @@
     margin-right: 20px
 
     &__i
+      //background: red
       width: 150px
 
     &__price
       position: absolute
-      @include font(700)
+      font-weight: 700
       margin-top: -60px
       margin-left: 20px
-      color: #FFFFFF
+      color: white
       font-size: 32px
 
   &__info
@@ -26,21 +26,21 @@
       margin-bottom: 16px
 
       &__text
-        @include font(500)
+        font-weight: 500
         color: rgba($colorMain, 0.4)
         margin-bottom: 4px
 
       &__d
-        @include font(400)
+        font-weight: 400
         color: rgba($colorMain, 0.88)
 
     &__link
       &__l
-        @include font(400)
+        font-weight: 400
         color: $colorGreen
 
   &__button
-    @include font(400)
+    font-weight: 400
     color: rgba($colorMain, 0.8)
     background: rgba(62, 80, 114, 0.08)
     border-radius: 8px

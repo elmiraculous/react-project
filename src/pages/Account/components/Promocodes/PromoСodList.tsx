@@ -1,5 +1,5 @@
 import React from "react"
-import {PromocodesArray} from "./PromocodesArray"
+import {PromoСodArray} from "./PromocodesArray"
 
 const productType = [
 	{
@@ -22,10 +22,10 @@ const productType = [
 	}
 
 ]
-export const PromocodeList = () => {
+export const PromoСodList = () => {
 	return (
 		<div>
-			<PromocodesArray promocod={productType}/>
+			<PromoСodArray promocod={productType}/>
 		</div>
 	)
 }

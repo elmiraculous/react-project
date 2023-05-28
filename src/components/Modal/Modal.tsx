@@ -2,23 +2,17 @@ import React, {useRef, useState} from "react"
 import styles from "./Modal.module.sass"
 import {Portal} from "../Portal/Portal"
 import {UseModalHooks} from "../hooks/UseModalHooks"
-import {PartnerLogin} from "./PartnerLogin"
-import {Register} from "./Register"
-import {Code} from "./Code"
-import {Login} from "./Login"
 import {Icon} from "../Icon/Icon"
+import {Login} from "./component/Login"
+import {Register} from "./component/Register"
+import {Code} from "./component/Code"
+import {PartnerLogin} from "./component/PartnerLogin"
+
 
 interface Props {
     visible: boolean;
     onClose: () => void;
 
-}
-
-enum ModalTabs {
-    Login,
-    Register,
-    PartnerLogin,
-    EnterCode,
 }
 
 export const Modal = ({visible, onClose}: Props) => {

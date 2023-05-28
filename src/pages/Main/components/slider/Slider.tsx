@@ -1,13 +1,11 @@
 import React, {useState} from "react"
-import left from "../../../../images/left.png"
-import right from "../../../../images/right.png"
 import styles from "./Slider.module.sass"
 import {Icon} from "../../../../components/Icon/Icon"
 
 
 interface Slide {
-    text1: string;
-    text2: string;
+    title: string;
+    content: string;
     textButton: string;
     image: string;
     color: string
@@ -41,17 +39,18 @@ export const Slider: React.FC<SliderProps> = ({slides}) => {
 	return (
 		<div className={styles.slider}>
 			<div className={styles.arrowLeft}>
-				<button className={styles.but} onClick={handlePrevSlide}>
+				<button type="button" className={styles.but} onClick={handlePrevSlide}>
 					<Icon width={8} name={"left"}/>
 				</button>
 			</div>
 
 			<div className={styles.slider__content} style={{backgroundColor: activeSlide.color}}>
 				<div className={styles.slider__content__bl}>
-					<div className={styles.slider__content__bl__text1}>{activeSlide.text1}</div>
-					<div className={styles.slider__content__bl__text2}>{activeSlide.text2}</div>
+					<div className={styles.slider__content__bl__text1}>{activeSlide.title}</div>
+					<div className={styles.slider__content__bl__text2}>{activeSlide.content}</div>
 					<div>
-						<button className={styles.slider__content__bl__button}>{activeSlide.textButton}</button>
+						<button type="button"
+							className={styles.slider__content__bl__button}>{activeSlide.textButton}</button>
 					</div>
 
 				</div>
@@ -64,7 +63,7 @@ export const Slider: React.FC<SliderProps> = ({slides}) => {
 
 
 			<div className={styles.arrowRight}>
-				<button className={styles.but} onClick={handleNextSlide}>
+				<button type="button" className={styles.but} onClick={handleNextSlide}>
 					<Icon width={8} name={"right"}/>
 
 				</button>

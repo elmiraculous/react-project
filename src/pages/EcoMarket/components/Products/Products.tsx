@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./Products.module.sass"
-import priceImage from "../../../../images/Frame 3 (3).png"
 
 export interface ProductsProps {
     img: string
@@ -25,7 +24,7 @@ export const Products = (props: ProductsProps) => {
 
 			<div className={styles.product__price}>
 				<div>
-					<img src={priceImage} alt={"price"}/>
+					<img src="/images/Frame 3 (3).png" alt={"price"}/>
 				</div>
 				<span className={styles.product__price__text}>{props.price}</span>
 			</div>

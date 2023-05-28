@@ -1,5 +1,4 @@
-@import "../../../../styles/Color"
-@import "../../../../styles/Fonts"
+@import "../../../../styles/mixins"
 .block
   display: flex
   flex-direction: row
@@ -7,12 +6,12 @@
 .white
   background: $colorBottomLight
   color: rgba($colorTextGrey, 0.8)
-  @include font(400)
+  font-weight: 400
   margin-right: 10px
   border-radius: 61px
   height: 40px
   border: none
-  padding: 1rem
+  padding: 10px 20px
   cursor: pointer
   display: flex
   align-items: center

@@ -1,18 +1,19 @@
-@import "src/styles/Color.sass"
-@import "src/styles/Fonts.sass"
+@import "src/styles/mixins.sass"
+
 .overlay
   position: fixed
   left: 0
   top: 0
   right: 0
   bottom: 0
-  background-color: rgba($colorBackgroundModal,0.6)
+  background-color: rgba($colorBackgroundModal, 0.6)
   display: flex
   justify-content: center
   align-items: center
   z-index: 1000
+
 .modal
-  background-color: #FFFFFF
+  background-color: white
   padding: 60px
 
 .form
@@ -24,7 +25,7 @@
   height: 50px
   border-radius: 8px
   border: 1px solid rgba(0, 11, 38, 0.16)
-  @include font(400)
+  font-weight: 400
   background-color: $colorWhite
   margin-bottom: 24px
 
@@ -33,41 +34,41 @@
   border-radius: 8px
   align-items: center
   height: 50px
-  @include font(500)
+  font-weight: 500
   color: $colorWhite
   margin-top: 8px
+
 .but_green
   display: flex
   flex-direction: row
   justify-content: space-between
   color: $colorGreen
-  @include font(400)
+  font-weight: 400
   margin: 16px 0
 
 .but_partner
   background: rgba(62, 80, 114, 0.08)
   border-radius: 8px
   height: 50px
-  @include font(500)
-  color: rgba($colorTextGrey,0.8)
+  font-weight: 500
+  color: rgba($colorTextGrey, 0.8)
   margin-top: 15px
 
 .text
-  @include font(600)
-  color: rgba($colorTextGrey,0.88)
+  font-weight: 600
+  color: rgba($colorTextGrey, 0.88)
   font-size: 28px
+
 .text2
-  @include font(500)
-  color: rgba($colorTextGrey,0.64)
+  font-weight: 500
+  color: rgba($colorTextGrey, 0.64)
   margin-bottom: 16px
+
 .but_green
   color: $colorGreen
+
 .block
   margin-bottom: 45px
   display: flex
   justify-content: space-between
-  fill: rgba($colorTextGrey,0.72)
-//.cross
-//  display: flex
-//  justify-content: space-between
-//  fill: rgba($colorTextGrey,0.72)
+  fill: rgba($colorTextGrey, 0.72)

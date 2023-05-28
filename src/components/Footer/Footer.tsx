@@ -7,11 +7,11 @@ export const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={styles.gmail}>
 				<div className={styles.emailImg}><Icon name={"email"}/></div>
-				<span className={styles.text}>info@ecorus.ru</span>
+				<a href="mailto:info@ecorus.ru" className={styles.text}>info@ecorus.ru</a>
 			</div>
 			<div className={styles.phone}>
 				<div className={styles.phoneImg}><Icon name={"phone"}/></div>
-				<span className={styles.text}>+7 (800) 880-88-88</span>
+				<a href="tel:+78008808888" className={styles.text}>+7 (800) 880-88-88</a>
 			</div>
 		</footer>
 	)

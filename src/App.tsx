@@ -4,10 +4,9 @@ import {Main} from "./pages/Main/Main"
 import {CollectionPoints} from "./pages/CollectionPoints/CollectionPoints"
 import {About} from "./pages/About/About"
 import {Layout} from "./Layout"
-
 import {Account} from "./pages/Account/Account"
 import {EcoMarket} from "./pages/EcoMarket/EcoMarket"
-import {PromocodeList} from "./pages/Account/components/Promocodes/PromocodesList"
+import {PromoСodList} from "./pages/Account/components/Promocodes/PromoСodList"
 import {HistoryList} from "./pages/Account/components/History/HistoryList"
 
 
@@ -21,7 +20,7 @@ export const App = () => {
 					<Route path='/EcoMarket' element={<EcoMarket/>}></Route>
 					<Route path='/About' element={<About/>}></Route>
 					<Route path='/Account' element={<Account/>}>
-						<Route path='/Account/PromoCodes' element={<PromocodeList/>}></Route>
+						<Route path='/Account/PromoCodes' element={<PromoСodList/>}></Route>
 						<Route path='/Account/History' element={<HistoryList/>}></Route>
 					</Route>
 				</Route>
