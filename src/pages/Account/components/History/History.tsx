@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./History.module.sass"
-import priceImage from "../../../../images/Frame 3 (3).png"
 
 
 interface material {
@@ -42,7 +41,7 @@ export const History = (props: HistoryProps) => {
 			<div>
 				<div className={styles.main__price}>
 					<div>
-						<img src={priceImage} alt={"price"}/>
+						<img src="/images/Frame 3 (3).png" alt={"price"}/>
 					</div>
 					<span className={styles.main__price__text}>{props.price}</span>
 				</div>

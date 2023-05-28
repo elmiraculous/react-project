@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./Modal.module.sass"
+import styles from "../Modal.module.sass"
 import {Field, Form, Formik} from "formik"
 
 interface PartnerLoginProps {
@@ -71,6 +71,6 @@ export const PartnerLogin: React.FC<PartnerLoginProps> = ({onTabChange}) => {
 
 			</Formik>
 		</div>
-		
+
 	)
 }

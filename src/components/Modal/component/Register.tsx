@@ -1,9 +1,9 @@
 import React, {useEffect} from "react"
-import styles from "./Modal.module.sass"
+import styles from "../Modal.module.sass"
 import {Formik} from "formik"
-import {useRegistrationMutation} from "../store/auth"
-import {RegisterBody} from "../../app/models/generated/profile.model"
 import {NavLink} from "react-router-dom"
+import {useRegistrationMutation} from "../../store/auth"
+import {RegisterBody} from "../../../app/models/generated/profile.model"
 
 interface RegisterProps {
     onTabChange: (tabName: string) => void;

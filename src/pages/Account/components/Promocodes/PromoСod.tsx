@@ -1,26 +1,24 @@
 import React from "react"
-import images from "../../../../images/Promocodes/img.png"
-import images2 from "../../../../images/Promocodes/img_2.png"
 import styles from "./Promocodes.module.sass"
 
 
-export interface PromocodesProps {
+export interface PromoСodProps {
     active: boolean
     date: string
     link: string
     price: string
 }
 
-export const Promocodes = (props: PromocodesProps) => {
+export const PromoСod = (props: PromoСodProps) => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.main__img}>
 				{props.active ? (
 					<div>
-						<img className={styles.main__img__i} src={images} alt={"images"}/>
+						<img className={styles.main__img__i} src="/images/Promocodes/img.png" alt={"images"}/>
 					</div>
 				) : <div>
-					<img className={styles.main__img__i} src={images2} alt={"images"}/>
+					<img className={styles.main__img__i} src="/images/Promocodes/img_2.png" alt={"images"}/>
 				</div>
 				}
 				<span className={styles.main__img__price}>{props.price}</span>
@@ -41,7 +39,7 @@ export const Promocodes = (props: PromocodesProps) => {
 			</div>
 			{props.active ? (
 				<div>
-					<button className={styles.main__button}>Показать qr-код</button>
+					<button type="button" className={styles.main__button}>Показать qr-код</button>
 				</div>
 			) : null}
 

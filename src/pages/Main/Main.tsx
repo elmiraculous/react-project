@@ -1,33 +1,28 @@
 import React from "react"
 import styles from "./Main.module.sass"
-import img1 from "../../images/recycling-concept-flat-lay 2 2.png"
-import img2 from "../../images/слайд2 1.png"
-import img3 from "../../images/Frame 2058.png"
-import map from "../../images/Frame 1997.png"
-import map2 from "../../images/OrgUVC-L_Bus-39_Single-06 [преобразованный] 1.png"
 import {Slider} from "./components/slider/Slider"
-import {Component} from "./components/Component"
+import {Card} from "./components/card/Card"
 
 const slides = [
 	{
-		text1: "Сделаем мир чище",
-		text2: "Сдай макулатуру или старую одежду и получи скидку на покупку товаров из переработанных материалов",
+		title: "Сделаем мир чище",
+		content: "Сдай макулатуру или старую одежду и получи скидку на покупку товаров из переработанных материалов",
 		textButton: "Условия сервиса",
-		image: img1,
+		image: "/images/recycling-concept-flat-lay 2 2.png",
 		color: "#B3EDC8"
 	},
 	{
-		text1: "А вы знали...",
-		text2: "что среднее время разложения пластмассовых изделий колеблется от 400 до 700 лет,  а полиэтиленовых пакетов — от 100 до 200 лет? ",
+		title: "А вы знали...",
+		content: "что среднее время разложения пластмассовых изделий колеблется от 400 до 700 лет,  а полиэтиленовых пакетов — от 100 до 200 лет? ",
 		textButton: "Узнать больше",
-		image: img2,
+		image: "/images/слайд2 1.png",
 		color: "#FFE48F"
 	},
 	{
-		text1: "Что с масками?",
-		text2: "Медицинские маски не обязательно должны становиться отходами.Их тоже можно сдать на переработку.",
+		title: "Что с масками?",
+		content: "Медицинские маски не обязательно должны становиться отходами.Их тоже можно сдать на переработку.",
 		textButton: "Пункты сбора масок",
-		image: img3,
+		image: "/images/Frame 2058.png",
 		color: "#BFF0DE"
 	}
 ]
@@ -36,13 +31,13 @@ export const Main = () => {
 		<div className={styles.main}>
 			<Slider slides={slides}/>
 			<div className={styles.block}>
-
-				<Component text1={"Пункты сбора"}
-					text2={"Посмотри, где в твоем городе можно сдать вторсырье на переработку"} img={map}
+				<Card title={"Пункты сбора"}
+					content={"Посмотри, где в твоем городе можно сдать вторсырье на переработку"}
+					img="/images/Frame 2058.png"
 					link={"/CollectionPoints"}/>
-				<Component text1={"ЭкоМаркет"}
-					text2={"Используй заработанные экокоины для покупки товаров из переработанных материалов "}
-					img={map2} link={"/EcoMarket"}/>
+				<Card title={"ЭкоМаркет"}
+					content={"Используй заработанные экокоины для покупки товаров из переработанных материалов "}
+					img="/images/OrgUVC-L_Bus-39_Single-06 [преобразованный] 1.png" link={"/EcoMarket"}/>
 			</div>
 		</div>
 	)

@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./Modal.module.sass"
+import styles from "../Modal.module.sass"
 import {Field, Form, Formik} from "formik"
 
 interface CodeProps {
@@ -39,7 +39,7 @@ export const Code: React.FC<CodeProps> = ({onTabChange}) => {
 						/>
 						<button className={styles.but_entrance}>Отправить</button>
 						<div className={styles.but_green}>
-							<button>Не получил(-а) код</button>
+							<button type="button">Не получил(-а) код</button>
 						</div>
 						<button className={styles.but_partner} onClick={() => onTabChange("partner-login")}>Вход для
                             партнёров

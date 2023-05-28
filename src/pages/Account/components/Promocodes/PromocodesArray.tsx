@@ -1,15 +1,15 @@
 import React from "react"
-import {Promocodes, PromocodesProps} from "./Promocodes"
+import {PromoСod, PromoСodProps} from "./PromoСod"
 
-interface PromocodesArrayProps {
-    promocod: Array<PromocodesProps>
+interface PromoСodArrayProps {
+    promocod: Array<PromoСodProps>
 }
 
-export const PromocodesArray = (props: PromocodesArrayProps) => {
+export const PromoСodArray = (props: PromoСodArrayProps) => {
 	return (
 		<div>
-			{props.promocod.map((promocod: PromocodesProps, index: number) =>
-				<Promocodes key={index}
+			{props.promocod.map((promocod: PromoСodProps, index: number) =>
+				<PromoСod key={index}
 					active={promocod.active}
 					date={promocod.date}
 					link={promocod.link}

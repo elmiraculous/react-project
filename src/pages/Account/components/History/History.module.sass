@@ -1,5 +1,5 @@
-@import "../../../../styles/Fonts"
-@import "../../../../styles/Color"
+@import "../../../../styles/mixins"
+
 .main
   display: flex
   flex-direction: row
@@ -14,12 +14,12 @@
     &__text
 
       &__type
-        @include font(500)
+        font-weight: 500
         color: rgba($colorMain, 0.4)
         margin-bottom: 4px
 
       &__info
-        @include font(400)
+        font-weight: 400
         display: flex
         flex-direction: row
         color: rgba($colorMain, 0.88)
@@ -43,8 +43,6 @@
 
     &__text
       margin-left: 8px
-      @include font(600)
+      font-weight: 600
       display: flex
       align-items: center
-
-r

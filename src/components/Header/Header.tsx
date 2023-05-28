@@ -1,25 +1,30 @@
 import React from "react"
 import styles from "./Header.module.sass"
-import logo from "../../images/Frame 1982.png"
-import {Account} from "./Account"
 import {NavLink} from "react-router-dom"
-import cn from "classnames"
+import cn from "classnames/bind"
+import {Account} from "./component/account/Account"
+
+const cx = cn.bind(styles)
 
 export const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logo}>
-				<img src={logo} alt={"logo"}/>
+				<img src="/images/icon.svg" alt={"logo"}/>
 			</div>
 			<nav>
 				<NavLink to="/"
-					className={({isActive}) => cn(styles.text, isActive && styles.activeLink)}>Главная</NavLink>
+					className={({isActive}) => cx(styles.text,
+						{activeLink: isActive})}>Главная</NavLink>
 				<NavLink to='/CollectionPoints'
-					className={({isActive}) => cn(styles.text, isActive && styles.activeLink)}>Пункты
+					className={({isActive}) => cx(styles.text,
+						{activeLink: isActive})}>Пункты
                     сбора</NavLink>
 				<NavLink to="/EcoMarket"
-					className={({isActive}) => cn(styles.text, isActive && styles.activeLink)}>ЭкоМаркет</NavLink>
-				<NavLink to="/About" className={({isActive}) => cn(styles.text, isActive && styles.activeLink)}>О
+					className={({isActive}) => cx(styles.text,
+						{activeLink: isActive})}>ЭкоМаркет</NavLink>
+				<NavLink to="/About" className={({isActive}) => cx(styles.text,
+					{activeLink: isActive})}>О
                     сервисе</NavLink>
 			</nav>
 			<Account/>

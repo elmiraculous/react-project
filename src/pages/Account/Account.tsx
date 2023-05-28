@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./Account.module.sass"
 import {Outlet} from "react-router-dom"
 import {Profile} from "./components/Profile/Profile"
-import {Nav} from "./components/Nav"
+import {Nav} from "./components/nav/Nav"
 
 export const Account = () => {
 	return (
