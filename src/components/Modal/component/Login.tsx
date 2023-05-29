@@ -1,8 +1,10 @@
 import React, {useEffect} from "react"
+import * as Yup from "yup"
 import styles from "../Modal.module.sass"
 import {Formik} from "formik"
 import {useAuthorizationMutation} from "../../store/auth"
 import {AuthenticationRequest} from "../../../app/models/generated"
+
 
 interface LoginProps {
     onTabChange: (tabName: string) => void;
@@ -23,6 +25,11 @@ export const Login: React.FC<LoginProps> = ({onTabChange}) => {
 		login(formData)
 	}
 
+	const validationSchema = Yup.object().shape({
+		login: Yup.string().required("Телефон обязателен"),
+		password: Yup.string().required("Пароль обязателен"),
+	})
+
 
 	return (
 		<div>
@@ -32,6 +39,7 @@ export const Login: React.FC<LoginProps> = ({onTabChange}) => {
 					login: "",
 					password: ""
 				}}
+				validationSchema={validationSchema}
 				onSubmit={handleSubmit}
 
 			>
@@ -40,6 +48,8 @@ export const Login: React.FC<LoginProps> = ({onTabChange}) => {
 					handleChange,
 					handleBlur,
 					handleSubmit,
+					errors,
+					touched,
 				}) => (
 					<form onSubmit={handleSubmit} className={styles.form}>
 
@@ -51,8 +61,10 @@ export const Login: React.FC<LoginProps> = ({onTabChange}) => {
 								onBlur={handleBlur}
 								value={values.login}
 								placeholder="Телефон"
+								autoComplete="off"
 							/>
 						</label>
+						{touched.login && errors.login && <div className={styles.errors}>{errors.login}</div>}
 
 						<label className={styles.input}>
 							<input
@@ -62,8 +74,10 @@ export const Login: React.FC<LoginProps> = ({onTabChange}) => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.password}
+								autoComplete="off"
 							/>
 						</label>
+						{touched.password && errors.password && <div className={styles.errors}>{errors.password}</div>}
 
 						<button disabled={isLoading} type='submit' className={styles.but_entrance}>Войти</button>
 						<div className={styles.but_green}>

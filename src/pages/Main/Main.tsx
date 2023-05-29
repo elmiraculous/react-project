@@ -33,7 +33,7 @@ export const Main = () => {
 			<div className={styles.block}>
 				<Card title={"Пункты сбора"}
 					content={"Посмотри, где в твоем городе можно сдать вторсырье на переработку"}
-					img="/images/Frame 2058.png"
+					img="/images/Frame 1997.png"
 					link={"/CollectionPoints"}/>
 				<Card title={"ЭкоМаркет"}
 					content={"Используй заработанные экокоины для покупки товаров из переработанных материалов "}
