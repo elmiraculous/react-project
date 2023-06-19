@@ -8,26 +8,29 @@ const cx = cn.bind(styles)
 
 export const Header = () => {
 	return (
-		<header className={styles.header}>
-			<div className={styles.logo}>
-				<img src="/images/icon.svg" alt={"logo"}/>
+		<header className={styles.hed}>
+			<div className={styles.header}>
+				<div className={styles.logo}>
+					<img className={styles.img} src="/images/icon.svg" alt={"logo"}/>
+				</div>
+				<nav>
+					<NavLink to="/"
+						className={({isActive}) => cx(styles.text,
+							{activeLink: isActive})}>Главная</NavLink>
+					<NavLink to='/CollectionPoints'
+						className={({isActive}) => cx(styles.text,
+							{activeLink: isActive})}>Пункты
+                        сбора</NavLink>
+					<NavLink to="/EcoMarket"
+						className={({isActive}) => cx(styles.text,
+							{activeLink: isActive})}>ЭкоМаркет</NavLink>
+					<NavLink to="/About" className={({isActive}) => cx(styles.text,
+						{activeLink: isActive})}>О
+                        сервисе</NavLink>
+				</nav>
+				<Account/>
 			</div>
-			<nav>
-				<NavLink to="/"
-					className={({isActive}) => cx(styles.text,
-						{activeLink: isActive})}>Главная</NavLink>
-				<NavLink to='/CollectionPoints'
-					className={({isActive}) => cx(styles.text,
-						{activeLink: isActive})}>Пункты
-                    сбора</NavLink>
-				<NavLink to="/EcoMarket"
-					className={({isActive}) => cx(styles.text,
-						{activeLink: isActive})}>ЭкоМаркет</NavLink>
-				<NavLink to="/About" className={({isActive}) => cx(styles.text,
-					{activeLink: isActive})}>О
-                    сервисе</NavLink>
-			</nav>
-			<Account/>
+
 		</header>
 	)
 
